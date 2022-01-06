@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProductWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .nav-item :hover {
+            opacity: 80%;
+            cursor: pointer;
+            transition: ease-in 0.3s;
+        }
+
+        .my-2 :hover {
+            opacity: 80%;
+            cursor: pointer;
+            transition: ease-in 0.3s;
+        }
+
+        .bgNav {
+            background-color: #082032;
+        }
+
+        .navbar-brand img {
+            width: auto;
+            height: 30px;
+        }
+
+        .titleA {
+            font-family: 'Prompt', sans-serif;
+            font: 80px;
+        }
+
+        .titleA span {
+            font-weight: 500;
+        }
+
+        .card {
+            margin-top: 5px;
+            margin-left : 8px;
+            border: 0px;
+        }
+
+        .card img {
+            height: 18rem;
+        }
+
+        .btn {
+            width: 60px;
+            background-color: #334756;
+            color: white;
+        }
+
+        .btn-hover {
+            color : white;
+            opacity: 80%;
+            cursor: pointer;
+            transition: ease-in 0.3s;
+        }
+
+        .card-title, .pay-text {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+
+        .card-body, .many-text, .payment-text {
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .text-price {
+            font-size: 15px;
+            color: #53B8BB;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        footer {
+            background-color: #082032;
+        }
+
+        .nav-link text-white:hover {
+            transition: ease-in 0.3s;
+            opacity: 80%;
+        }
+
+        .pay-img {
+            width: 90px;
+            height: 90px;
+        }
+        .pay-text, .many-text {
+            margin: 0;
+            font-size: 20px;
+        }
+        .payment-text {
+            font-size:30px;
+            font-weight: 500;
+            margin:0;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow bgNav navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="/image/Apple_logo_white.svg">
+                </a>
+                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item"><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Product">Product</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Payment">Payment</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Aboutus">About us</a></li>
+                    </ul>
+                    <div class="my-2 my-lg-0">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SignIn">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    @RenderBody()
+    
+
+    <footer class="border-top footer text-white">
+        <div class="container">
+            <a style="margin-left : 15px;">&copy; 2564 - Apple Inc.</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

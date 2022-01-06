@@ -1,0 +1,99 @@
+﻿@{ ViewData["Title"] = "Payment"; }
+
+
+    <div class="text-center pt-5">
+        <h1 class="display-4 titleA"> <span>เลือกซื้อสินค้า</span></h1>
+    </div>
+
+    <form asp-controller="Home" asp-action="Calculation" method="post">
+        <div class="container-fluid ">
+            <div class=" container-fluid d-flex justify-content-center">
+                <div class="w-50 d-flex justify-content-between">
+                    <div class="d-flex">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-11-select-202104_GEO_TH_LANG_TH?wid=545&hei=550&fmt=jpeg&qlt=95&.v=1617864728000" class="pay-img" alt="...">
+                        <div class="ml-3 pt-3">
+                            <p class="pay-text">
+                                iPad Pro
+                            </p>
+                            <p class="text-price">
+                                ฿27,900
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-end " style=""> <input class=" " style="width:100px; height:30px;" id="text" type="text" name="txt1" /><label class="many-text ml-2 ">ชิ้น</label></div>
+                </div>
+            </div>
+            <hr class="w-50" />
+
+            <div class=" container-fluid d-flex justify-content-center">
+                <div class="w-50 d-flex justify-content-between">
+                    <div class="d-flex">
+                        <img style="object-fit: cover;" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-family-hero?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1604021663000" class="pay-img" alt="...">
+                        <div class="ml-3 pt-3">
+                            <p class="pay-text">
+                                iPhone 12 Pro
+                            </p>
+                            <p class="text-price">
+                                ฿36,900
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-end " style=""> <input class=" " style="width:100px; height:30px;" id="text" type="text" name="txt2" /><label class="many-text ml-2 ">ชิ้น</label></div>
+                </div>
+            </div>
+            <hr class="w-50" />
+
+            <div class=" container-fluid d-flex justify-content-center">
+                <div class="w-50 d-flex justify-content-between">
+                    <div class="d-flex">
+                        <img style="object-fit: cover;" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000" class="pay-img" alt="...">
+                        <div class="ml-3 pt-3">
+                            <p class="pay-text">
+                                Apple Watch Series 6
+                            </p>
+                            <p class="text-price">
+                                ฿13,400
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-end " style=""> <input class=" " style="width:100px; height:30px;" id="text" type="text" name="txt3" /><label class="many-text ml-2 ">ชิ้น</label></div>
+                </div>
+            </div>
+            <hr class="w-50" />
+
+            <div class=" container-fluid d-flex justify-content-center">
+                <div class="w-50 d-flex justify-content-between">
+                    <div class="d-flex">
+                        <img style="object-fit: cover;" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_TH?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1613672888000" class="pay-img" alt="...">
+                        <div class="ml-3 pt-3">
+                            <p class="pay-text">
+                                MacBook Pro
+                            </p>
+                            <p class="text-price">
+                                ฿75,900
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-end " style=""> <input class=" " style="width:100px; height:30px;" id="text" type="text" name="txt4" /><label class="many-text ml-2 ">ชิ้น</label></div>
+                </div>
+            </div>
+            <hr class="w-50" />
+
+         
+
+            <div class=" container-fluid d-flex justify-content-center mb-5">
+                <div class="w-50 d-flex justify-content-center">
+                    <input class="btn-dark rounded-pill" style="width:100px; height : 40px;" id="Submit1" type="submit" value="ยืนยัน" />
+                </div>
+            </div>
+            <br />
+     </div>
+     </form>

@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Product";
+}
+
+<div class="container">
+    <div class="text-center pt-5">
+        <h1 class="display-4 titleA"> <span>เปลี่ยนลุคใหม่</span> <br> <span>แต่คุ้นเคยไม่เปลี่ยน</span></h1>
+    </div>
+
+    <div class="text-center pt-3">
+        <a asp-area="" asp-controller="Home" asp-action="Listitem" class="titleA" style="color: #0066cc; font-size:20px;">ดูรายการสินค้าทั้งหมด</a>
+    </div>
+
+    <div class="container-fluid d-flex justify-content-around py-5  flex-wrap">
+        <div class="card" style="width: 18rem;">
+            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-11-select-202104_GEO_TH_LANG_TH?wid=545&hei=550&fmt=jpeg&qlt=95&.v=1617864728000" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">iPad Pro</h5>
+                <p class="card-text">
+                    ที่สุดแห่งประสบการณ์ <br>ของ iPad
+                </p>
+                <p class="card-text text-price">
+                    ฿27,900
+                </p>
+                <a asp-area="" asp-controller="Home" asp-action="Payment" class="btn btn-dark rounded-pill ">ซื้อ</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem; ">
+            <img style="object-fit: cover;" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-family-hero?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1604021663000" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">iPhone 12 Pro</h5>
+                <p class="card-text">
+                    ปีแห่งการก้าวกระโดด <br> ของ iPhone
+                </p>
+                <p class="card-text text-price">
+                    ฿36,900
+                </p>
+                <a asp-area="" asp-controller="Home" asp-action="Payment" class="btn btn-dark rounded-pill ">ซื้อ</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">Apple Watch Series 6</h5>
+                <p class="card-text">
+                    อนาคตของสุขภาพ
+                    <br>บนข้อมือคุณ
+                </p>
+                <p class="card-text text-price">
+                    ฿13,400
+                </p>
+                <a asp-area="" asp-controller="Home" asp-action="Payment" class="btn btn-dark rounded-pill ">ซื้อ</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_TH?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1613672888000" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">MacBook Pro</h5>
+                <p class="card-text">
+                    ตัวท็อป
+                    <br>สำหรับมือโปร
+                </p>
+                <p class="card-text text-price">
+                    ฿75,900
+                </p>
+                <a asp-area="" asp-controller="Home" asp-action="Payment" class="btn btn-dark rounded-pill ">ซื้อ</a>
+            </div>
+        </div>
+    </div>
+</div>

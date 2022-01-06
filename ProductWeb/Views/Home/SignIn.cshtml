@@ -1,0 +1,48 @@
+﻿@model ProductWeb.Models.newuser
+
+@{
+    ViewData["Title"] = "SignIn";
+}
+
+<div class="container-fluid">
+    <h1 class=" card-body mb-3" style="text-align: center;">สร้างไอดี</h1>
+    <div class="mx-auto" style="width: 30vw;">
+        <form asp-action="SignIn" class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="username" class="control-label">ชื่อผู้ใช้ :</label>
+                <input asp-for="username" class="form-control" />
+                <span asp-validation-for="username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="useremail" class="control-label">อีเมลผู้ใช้ :</label>
+                <input asp-for="useremail" class="form-control" />
+                <span asp-validation-for="useremail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userphone" class="control-label">เบอร์โทรศัพท์ผู้ใช้ :</label>
+                <input asp-for="userphone" class="form-control" />
+                <span asp-validation-for="userphone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="password" class="control-label">รหัสผ่าน :</label>
+                <input asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="passwordagain" class="control-label">รหัสผ่านอีกครั้ง :</label>
+                <input asp-for="passwordagain" class="form-control" />
+                <span asp-validation-for="passwordagain" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="สร้างไอดีของคุณ" class="btn btn-primary" style="width: auto;" />
+            </div>
+        </form>
+
+        <div class="card-body" style=" padding-left:1.25rem;">
+            <a asp-action="SignIn">กลับไปที่รายการ</a>
+        </div>
+    </div>
+</div>
+
+

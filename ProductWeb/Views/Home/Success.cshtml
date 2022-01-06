@@ -1,0 +1,25 @@
+﻿@model ProductWeb.Models.newuser
+@{
+    ViewData["Title"] = "Success";
+}
+<div class="container-fluid">
+    <div class="card-body">
+        <h1 style="text-align:center;">การสมัครสำเร็จ!!!</h1>
+        <h2 style="text-align:center;">ขอยินดีต้อนรับคุณ @Html.DisplayFor(id => id.username)</h2>
+        <div class="mx-auto" style="width:30vw; font-weight:500;">
+            <br />
+            <span>ชื่อของคุณ : @Html.DisplayFor(id => id.username)</span><br />
+            <span>อีเมลของคุณ: @Html.DisplayFor(id => id.useremail)</span><br />
+            <span>เบอร์โทรศัพท์ของคุณ : @Html.DisplayFor(id => id.userphone)</span><br />
+            <span>รหัสผ่านของคุณ: @Html.DisplayFor(id => id.password)</span><br />
+        </div>
+        <br />
+        <div class="mx-auto" style="width:30vw; font-style:italic; color:lightgreen; ">
+            <span>กรุณายืนยันตัวตนในอีเมลของคุณ</span>
+        </div>
+        <br />
+        <div class="mx-auto" style="width:150px;">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary" style="width: auto;">กลับไปที่หน้าหลัก</a>
+        </div>
+    </div>
+</div>

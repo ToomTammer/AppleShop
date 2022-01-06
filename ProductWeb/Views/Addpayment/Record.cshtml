@@ -1,0 +1,81 @@
+﻿<link rel="stylesheet" href="~/css/sheet_one.css" />
+@model IEnumerable<ProductWeb.Models.db.Pmlist>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class=" titleB mb-3" style="text-align: center;">รายการสั่งซื้อทั้งหมด</h1>
+            <form asp-controller="Addpayment" asp-action="Search">
+                <input type="text" name="querry" />
+                <input type="submit" value="ค้นหา" />
+            </form>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            ชื่อ-นามสกุล
+                        </th>
+                        <th>
+                            อีเมล
+                        </th>
+                        <th>
+                            เบอร์โทรศัพท์
+                        </th>
+                        <th>
+                            ที่อยู่
+                        </th>
+                        <th>
+                            จำนวนสินค้าทั้งหมดที่ซื้อ
+                        </th>
+                        <th>
+                            จำนวนเงินรวม
+                        </th>
+                        <th>
+                            วันที่กดชำระ
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CustomerName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Phone)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Amount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price) บาท
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Paymentdate)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

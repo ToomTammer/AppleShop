@@ -1,0 +1,83 @@
+﻿<link rel="stylesheet" href="~/css/sheet_one.css" />
+@model ProductWeb.Models.db.Pmlist
+
+@{
+    ViewData["Title"] = "Payment Confrim";
+}
+
+<div class="container">
+    <h1 class=" titleB mb-2" style="text-align: center;">กรอกข้อมูลเพื่อชำระซื้อสินค้า</h1>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="card justify-content-center align-content-center" >
+                <div class="card-body">
+                    <form asp-area="" asp-controller="Addpayment" asp-action="Record">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="CustomerName" class="control-label">ชื่อ-นามสกุล</label>
+                            <input asp-for="CustomerName" class="form-control" />
+                            <span asp-validation-for="CustomerName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label">อีเมล</label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Phone" class="control-label">เบอร์โทรศัพท์</label>
+                            <input asp-for="Phone" class="form-control" />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Address" class="control-label">ที่อยู่</label>
+                            <input asp-for="Address" class="form-control" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Amount" class="control-label">จำนวนสินค้าทั้งหมดที่ซื้อ</label>
+                            <input asp-for="Amount" class="form-control" value="@ViewBag.Amount" />
+                            <span asp-validation-for="Amount" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Price" class="control-label">ราคารวม</label>
+                            <input asp-for="Price" class="form-control" value="@ViewBag.CalculationResult" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Paymentdate" class="control-label">วันที่กดชำระ</label>
+                            <input asp-for="Paymentdate" class="form-control" />
+                            <span asp-validation-for="Paymentdate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="img">สลิปใบเสร็จ</label><br />
+                            <input type="file" id="img" name="img" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="ซื้อ" class="btn-dark rounded-pill" style="width:80px; height : 40px;"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body mt-3 mb-2" style="height:300px; background-color: #082032; border-radius:20px;">
+                    <div class="text-white align-content-center">
+                        <p style="margin:0; font-size : 30px;">รายละเอียดการสั่งซื้อ</p>
+                        <p style="margin:0; font-size : 20px;">iPad Pro : @ViewBag.Num1 ชิ้น</p>
+                        <p style="margin:0; font-size : 20px;">iPhone 12 Pro : @ViewBag.Num2 ชิ้น</p>
+                        <p style="margin:0; font-size : 20px;">Apple Watch Series 6 : @ViewBag.Num3 ชิ้น</p>
+                        <p style="margin:0; font-size : 20px;">MacBook Pro : @ViewBag.Num4 ชิ้น</p>
+                        <p style="margin:0; font-size : 20px;">ราคาทั้งหมด : @ViewBag.CalculationResult บาท</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
